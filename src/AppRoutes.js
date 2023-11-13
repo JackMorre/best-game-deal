@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import SelectedGame from "./SelectedGame";
-import Home from "./Home";
-import Search from "./Search";
-import Wishlist from "./Wishlist";
-import NoMatch from "./NoMatch";
+import { SelectedGame } from "./pages/SelectedGame";
+import { Home } from "./pages/Home";
+import { Search } from "./pages/Search";
+import { Wishlist } from "./pages/Wishlist";
+import { NoMatch } from "./pages/NoMatch";
 
 export default function AppRoutes() {
   return (

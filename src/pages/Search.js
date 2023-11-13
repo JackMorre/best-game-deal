@@ -1,7 +1,7 @@
-export default function Search() {
+export const Search = () => {
   return (
     <div>
       <h1>Search</h1>
     </div>
   );
-}
+};
