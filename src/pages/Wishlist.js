@@ -1,7 +1,7 @@
-export const Wishlist = () => {
+export const Watchlist = () => {
   return (
     <div>
-      <h1>Wishlist</h1>
+      <h1>Watchlist</h1>
     </div>
   );
 };

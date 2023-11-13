@@ -2,8 +2,9 @@ import { Route, Routes } from "react-router-dom";
 import { SelectedGame } from "./pages/SelectedGame";
 import { Home } from "./pages/Home";
 import { Search } from "./pages/Search";
-import { Wishlist } from "./pages/Wishlist";
+import { Watchlist } from "./pages/Wishlist";
 import { NoMatch } from "./pages/NoMatch";
+import { Deals } from "./pages/Deals";
 
 export default function AppRoutes() {
   return (
@@ -11,7 +12,8 @@ export default function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/search" element={<Search />} />
       <Route path="/search/:id" element={<SelectedGame />} />
-      <Route path="/wishlist" element={<Wishlist />} />
+      <Route path="/watchlist" element={<Watchlist />} />
+      <Route path="/deals" element={<Deals />} />
       <Route path="*" element={<NoMatch />} />
     </Routes>
   );
