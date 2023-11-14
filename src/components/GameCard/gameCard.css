@@ -51,7 +51,14 @@
   line-height: 0.8;
 }
 
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .original-price {
+  width: fit-content;
   font-size: 10px;
   text-align: center;
   opacity: 0.5;
@@ -61,11 +68,12 @@
 .original-price::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 7px;
   left: 0;
-  background-color: black;
-  height: 2px;
+  background-color: white;
+  height: 1px;
   width: 100%;
+  transform: rotate(-20deg);
 }
 
 .best-price {
