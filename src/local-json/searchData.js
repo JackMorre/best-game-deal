@@ -1,4 +1,4 @@
-const data = [
+const dataForSearch = [
   {
     gameID: "612",
     steamAppID: null,
@@ -50,3 +50,5 @@ const data = [
       "https://cdn.cloudflare.steamstatic.com/steam/apps/208650/capsule_sm_120.jpg?t=1681938976",
   },
 ];
+
+export { dataForSearch };

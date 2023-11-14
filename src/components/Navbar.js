@@ -87,7 +87,7 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                 <Link
                   href={page.url}
-                  key={page}
+                  key={page.title}
                   onClick={handleCloseNavMenu}
                   sx={{ m: 2, color: "black", display: "block", width: "100%" }}
                 >
@@ -121,7 +121,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Link
                 href={page.url}
-                key={page}
+                key={page.title}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
