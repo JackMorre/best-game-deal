@@ -50,6 +50,13 @@ h1{
     background-color: var(--hoverPrimary);
 }
 
+.row{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0 1rem;
+}
+
+
 @media screen and (max-width: 600px) {
     .selectedGameContainer {
         flex-wrap: wrap;
@@ -57,5 +64,7 @@ h1{
     .gameImage {
         min-width:100%;
     }
-
+    .row{
+        display: block;
+    }
 }

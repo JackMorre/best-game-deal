@@ -12,8 +12,7 @@ import ShareIcon from '@mui/icons-material/Share';
 
 export const SelectedGameReview = () => {
     return (
-        <div  className="divStyle">
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 345, margin: 2}}>
                 <CardHeader
                     avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -39,6 +38,5 @@ export const SelectedGameReview = () => {
                     </IconButton>
                 </CardActions>
             </Card>
-        </div>
     );
 };
