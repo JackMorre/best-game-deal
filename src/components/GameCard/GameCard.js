@@ -16,7 +16,7 @@ export const GameCard = ({ title, image, price }) => {
         </div>
       </div>
       <button>
-        <ArrowForwardIosIcon />
+        <ArrowForwardIosIcon sx={{ fill: "black" }} />
       </button>
     </li>
   );

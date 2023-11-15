@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { GameCard } from "../components/GameCard/GameCard";
+import { SearchBar } from "../components/SearchBar/SearchBar";
 import axios from "axios";
 import { dataForSearch } from "../local-json/searchData";
 
@@ -44,7 +45,8 @@ export const Search = () => {
     [url]
   );
   return (
-    <section className="search" style={{ padding: "1rem" }}>
+    <section className="search">
+      <SearchBar />
       {!data ? (
         <h2 style={{ color: "black" }}>no Searches</h2>
       ) : (
