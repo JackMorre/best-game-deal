@@ -35,7 +35,6 @@ export const Search = () => {
             return await data;
           })
         ).then((results) => {
-          console.log(results);
           setData(results);
         });
         // console.log(newArray);
@@ -45,28 +44,34 @@ export const Search = () => {
     [url]
   );
   return (
-    <div style={{ padding: "1rem" }}>
+    <section className="search" style={{ padding: "1rem" }}>
       {!data ? (
         <h2 style={{ color: "black" }}>no Searches</h2>
       ) : (
         <div>
           <h2 style={{ color: "black" }}>Search</h2>
-          <ul style={{ listStyle: "none", padding: "0" }}>
+          <ul
+            style={{
+              listStyle: "none",
+              padding: "0",
+              display: "flex",
+              gap: "1rem",
+              flexDirection: "column",
+            }}
+          >
             {data.map((game) => {
               return (
                 <GameCard
                   key={game.gameID}
                   title={game.external}
                   image={game.thumb}
-                  percentage={game.bestDeal.savings}
-                  retail={game.bestDeal.retailPrice}
-                  price={game.bestDeal.price}
+                  price={game.cheapest}
                 />
               );
             })}
           </ul>
         </div>
       )}
-    </div>
+    </section>
   );
 };
