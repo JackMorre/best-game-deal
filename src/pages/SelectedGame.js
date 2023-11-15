@@ -1,7 +1,13 @@
+import { Stack } from "react-bootstrap";
+import { SelectedGameThumbnail } from "../components/SelectedGameThumbnail";
+import "../SelectedGame.css"
+import { SelectedGameReview } from "../components/SelectedGameReview";
+
 export const SelectedGame = () => {
   return (
-    <div>
-      <h1>Selected Game</h1>
-    </div>
+    <Stack>
+      <SelectedGameThumbnail/>
+      <SelectedGameReview/>
+    </Stack>
   );
 };
