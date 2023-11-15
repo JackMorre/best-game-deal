@@ -7,7 +7,10 @@ export const SelectedGame = () => {
   return (
     <Stack>
       <SelectedGameThumbnail/>
-      <SelectedGameReview/>
+      <Stack>
+        <SelectedGameReview/>
+      </Stack>
+      
     </Stack>
   );
 };
