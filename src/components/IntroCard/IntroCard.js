@@ -7,9 +7,9 @@ export const IntroCard = () => {
       <div className="container">
         <img src={frontImage} alt="person gaming on monitor"/>
         <div className="bottom-left">
-          <h1>DEALS</h1>
-          <p>for your favourite games.</p><br></br>
-          <p>All in one place.</p>
+          <h1 className="deals-h1">DEALS</h1>
+          <p className="p-text">for your favourite games.</p><br></br>
+          <p className="p-text">All in one place.</p>
         </div>
       </div>
     </>

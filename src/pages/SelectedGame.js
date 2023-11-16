@@ -1,9 +1,9 @@
 import { Stack } from "react-bootstrap";
-import { SelectedGameThumbnail } from "../components/SelectedGameThumbnail";
-import { SelectedGameReviews } from "../components/SelectedGameReviews";
-import { SelectedGameInfo } from "../components/SelectedGameInfo";
+import { SelectedGameThumbnail } from "../components/SelectedGame/SelectedGameThumbnail";
+import { SelectedGameReviews } from "../components/SelectedGame/SelectedGameReviews";
+import { SelectedGameInfo } from "../components/SelectedGame/SelectedGameInfo";
 
-import "../SelectedGame.css"
+import "../components/SelectedGame/SelectedGame.css"
 
 export const SelectedGame = () => {
   return (
