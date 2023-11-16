@@ -1,0 +1,29 @@
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input[type="text"] {
+  width: 80%;
+  background-color: #282828;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 20px 0 0 20px;
+  border: unset;
+  border: 4px solid #a688fa;
+  border-right: none;
+}
+
+.search-btn {
+  width: 20%;
+  background-color: #a688fa;
+  border: none;
+  padding: 0.6rem;
+  border: 4px solid #a688fa;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
+
+.search-c p {
+  color: red;
+}
