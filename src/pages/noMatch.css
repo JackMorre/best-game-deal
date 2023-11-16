@@ -1,0 +1,24 @@
+.noMatch {
+  text-align: center;
+  background-color: #282828;
+  padding: 50px 100px 50px 100px;
+}
+#linkHome {
+  text-align: center;
+  color: #a688fa;
+  text-decoration: none;
+}
+.noMatchContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.options {
+  flex: 0 0 20%; /* To have 4 items in a row */
+  margin: 20px;
+  padding: 50px;
+  border: 1px solid #ccc;
+  text-align: center;
+  text-decoration: none;
+}
