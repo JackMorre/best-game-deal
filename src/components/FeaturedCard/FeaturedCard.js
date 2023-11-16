@@ -87,3 +87,64 @@ export const FeaturedCard = ({title, thumb}) => {
 //   )}
 // </div>
 // )}
+
+
+// import "./FeaturedCard.css";
+// import React, { useState, useEffect } from 'react';
+
+
+// export const FeaturedCard = () => {
+  
+//   const [posts, setPosts] = useState([]);
+  
+//   useEffect(() => {
+//   fetch('https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15')
+//     .then((response) => response.json())
+//     .then((data) => {
+//         console.log(data);
+//         setPosts(data);
+//     })
+//     .catch((err) => {
+//         console.log(err.message);
+//     });
+// }, []);
+
+// const filtering = posts.filter(data  =>
+//   data.storeID === '1'
+// );
+
+// const gameCard = filtering.map(data => 
+// <div key={data.dealID}>
+//   <h3 className="game-title">{data.title}</h3>
+//   <img className="game-thumbnail" src={data.thumb} alt="featured game card"></img>
+// </div>
+// )
+
+
+// return (
+//   <div className="posts-container">
+//         <div className="featured-container">
+
+//           <h2 className="title">FEATURED GAMES</h2>
+
+//             <div className="grid-container">
+//               <div className="container-1">
+//                 {gameCard}
+//               </div>
+
+//               <div className="container-2">
+//                 {gameCard}
+//               </div>
+
+//               <div className="container-3">
+//                 {gameCard}
+//               </div>
+
+//               <div className="container-4">
+//                 {gameCard}
+//               </div>
+//             </div>
+
+//         </div>
+// </div>
+// )}
