@@ -1,0 +1,72 @@
+:root{
+    /*color*/
+    --backgroundColor: #121212;
+    --cardBackground: #282828;
+    --Primary: #A688FA;
+    --hoverPrimary: #BA9FFB;
+}
+
+.game-head{
+    margin-bottom: 0;
+}
+
+.divStyle {
+    margin: 1rem;
+    border: 1px solid var(--cardBackground);
+}
+.selectedGameContainer {
+    display: flex;
+    background-color: var(--cardBackground);
+}
+.gameImage {
+    min-width: 50%;
+    height: auto
+}
+.head {
+    margin: 1rem 0.5rem;
+}
+
+.streamStyle {
+    display: flex; 
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 16px;
+}
+
+.button{
+    border: none;
+    background-color: var(--Primary);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: var(--hoverPrimary);
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0 1rem;
+    gap: 2rem;
+}
+
+.col{
+    display: flex;
+}
+
+@media screen and (max-width: 600px) {
+    .selectedGameContainer {
+        flex-wrap: wrap;
+    }
+    .gameImage {
+        min-width:100%;
+    }
+    .row{
+        display: block;
+        
+    }
+    .col{
+        justify-content: center;
+    }
+}

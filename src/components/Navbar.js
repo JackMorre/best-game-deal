@@ -8,9 +8,10 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 
-import MenuItem from "@mui/material/MenuItem";
+/* import MenuItem from "@mui/material/MenuItem"; */
 import AdbIcon from "@mui/icons-material/Adb";
 import Link from "@mui/material/Link";
+import { useNavigate } from "react-router";
 
 // const pages = ["Search", "Watch List", "Deals"];
 
@@ -31,12 +32,19 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
+  let navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/`;
+    navigate(path);
+  };
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
+            onClick={routeChange}
             variant="h6"
             noWrap
             component="a"

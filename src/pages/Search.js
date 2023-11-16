@@ -33,9 +33,10 @@ export const Search = () => {
 
             // execute the fetchData function
             const data = await fetchData();
-            return await data;
+            return data;
           })
         ).then((results) => {
+          console.log(results);
           setData(results);
         });
         // console.log(newArray);
@@ -68,6 +69,7 @@ export const Search = () => {
                   title={game.external}
                   image={game.thumb}
                   price={game.cheapest}
+                  dealID={game.cheapestDealID}
                 />
               );
             })}

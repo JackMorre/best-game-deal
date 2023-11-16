@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { SelectedGame } from "./pages/SelectedGame";
 import { Home } from "./pages/Home";
 import { Search } from "./pages/Search";
-import { Watchlist } from "./pages/Wishlist";
+import { Watchlist } from "./pages/Watchlist";
 import { NoMatch } from "./pages/NoMatch";
 import { Deals } from "./pages/Deals";
 
