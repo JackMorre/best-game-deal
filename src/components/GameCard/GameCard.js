@@ -1,8 +1,7 @@
-import BuldursGateImg from "./BuldursGateImg.webp";
-
 import "./gameCard.css";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-export const GameCard = ({ title, image, percentage, retail, price }) => {
+export const GameCard = ({ title, image, price }) => {
   return (
     <li className="card-c">
       <div className="img-c">
@@ -11,15 +10,13 @@ export const GameCard = ({ title, image, percentage, retail, price }) => {
       <div className="text-c">
         <h3>{title}</h3>
         <div className="data-c">
-          <p className="percentage">-{Math.floor(+percentage)}%</p>
           <div className="price">
-            <p className="original-price">£{retail}</p>
             <p className="best-price">£{price}</p>
           </div>
         </div>
       </div>
       <button>
-        <p>+</p>
+        <ArrowForwardIosIcon sx={{ fill: "black" }} />
       </button>
     </li>
   );

@@ -6,7 +6,7 @@
 }
 
 .card-c {
-  height: 100px;
+  height: 80px;
   width: 100%;
   display: flex;
 }
@@ -14,10 +14,15 @@
 .img-c {
   width: 30%;
   overflow: hidden;
+  background-color: #282828;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
 }
 
 .img-c img {
-  height: 100px;
+  width: 250px;
 }
 
 .text-c {
@@ -27,6 +32,11 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 0.4rem;
+  padding: 0.5rem;
+}
+
+.text-c h3 {
+  font-size: 0.8rem;
 }
 .card-c button {
   width: 20%;
@@ -78,4 +88,24 @@
 
 .best-price {
   color: #a688fa;
+}
+
+@media only screen and (min-width: 800px) {
+  .img-c img {
+    width: 100%;
+  }
+  .card-c button {
+    width: 10%;
+  }
+  .text-c {
+    width: 60%;
+    flex-direction: row;
+    align-items: center;
+  }
+  .text-c h3 {
+    font-size: 1.5rem;
+  }
+  .best-price {
+    font-size: 1.5rem;
+  }
 }
