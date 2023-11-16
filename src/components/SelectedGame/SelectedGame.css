@@ -5,14 +5,8 @@
     --Primary: #A688FA;
     --hoverPrimary: #BA9FFB;
 }
-.body-page{
-    background: var(--Primary);
-    background: linear-gradient(0deg, rgba(166,136,250,1) 0%, var(--cardBackground) 100%);
-    background-repeat: no-repeat;
-    color: #fff;
-}
 
-h1{
+.game-head{
     margin-bottom: 0;
 }
 

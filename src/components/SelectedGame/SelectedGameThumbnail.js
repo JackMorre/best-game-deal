@@ -11,7 +11,7 @@ export const SelectedGameThumbnail = () => {
             <div className="selectedGameContainer">
                 <Image className="gameImage" alt="game" fluid src="https://cdn.fanatical.com/production/product/400x225/105f34ca-7757-47ad-953e-7df7f016741e.jpeg"/>
                 <div className="head">
-                <h1 >LEGO BATMAN</h1>
+                <h1 className="game-head" >LEGO BATMAN</h1>
                     <Rating
                     name="simple-controlled"
                     value={value}

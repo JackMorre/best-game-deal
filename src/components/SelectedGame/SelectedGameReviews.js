@@ -1,4 +1,4 @@
-import { SelectedGameReview } from "../components/SelectedGameReview";
+import { SelectedGameReview } from "../SelectedGame/SelectedGameReview";
 
 export const SelectedGameReviews = () => {
     return (
