@@ -7,7 +7,7 @@ import "../SelectedGame.css"
 
 export const SelectedGame = () => {
   return (
-    <Stack>
+    <Stack className="body-page">
       <SelectedGameThumbnail/>
         <div className="row">
           <div className="col"><SelectedGameInfo/></div>
