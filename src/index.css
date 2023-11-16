@@ -2,7 +2,8 @@
   font-family: "Roboto", sans-serif;
 }
 
-.search {
+.search,
+.watchlist {
   max-width: 1000px;
   padding: 1rem;
   margin: 0 auto;

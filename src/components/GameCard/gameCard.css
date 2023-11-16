@@ -35,6 +35,12 @@
   padding: 0.5rem;
 }
 
+.title-c {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .text-c h3 {
   font-size: 0.8rem;
 }
@@ -102,6 +108,10 @@
     flex-direction: row;
     align-items: center;
   }
+  .title-c svg {
+    align-self: flex-start;
+  }
+
   .text-c h3 {
     font-size: 1.5rem;
   }
