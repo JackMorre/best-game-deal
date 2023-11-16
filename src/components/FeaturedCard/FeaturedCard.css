@@ -54,15 +54,15 @@
 /* square div */
 .container-3 {
   grid-area: 2 / 3 / 3 / 4;
-  border: 3.5px solid black;
+  /* border: 3.5px solid black; */
   height: 20vh;
 }
 
 /* square div */
 .container-4 {
   grid-area: 2 / 4 / 3 / 5;
-  border: 3.5px solid black;
-  
+  /* border: 3.5px solid black; */
+  height: 20vh;
 }
 
 .game-thumbnail {

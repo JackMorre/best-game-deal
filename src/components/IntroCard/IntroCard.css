@@ -50,13 +50,13 @@
   background-color: none;
 }
 
-h1 {
+.deals-h1 {
   font-size: 20vh;
   color: var(--highlight-main);
   background-color:none;
 }
 
-p {
+.p-text {
   font-size: 2rem;
   background-color: none;
 }
