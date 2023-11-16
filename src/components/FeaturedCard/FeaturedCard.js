@@ -1,6 +1,4 @@
 import "./FeaturedCard.css";
-// import { dataForSearch } from "../../local-json/searchData";
-
 
 export const FeaturedCard = ({title, thumb}) => {
   return (
@@ -14,15 +12,18 @@ export const FeaturedCard = ({title, thumb}) => {
             </div>
 
             <div className="container-2">
+              <h3 className="game-title">{title}</h3>
               <img className="game-thumbnail" src="https://cdn.fanatical.com/production/product/400x225/105f34ca-7757-47ad-953e-7df7f016741e.jpeg" alt="featured game card"></img>
             </div>
 
             <div className="container-3">
-              <img className="game-thumbnail" src={thumb} alt="featured game card"></img>
+              <h3 className="game-title">{title}</h3>
+              <img className="game-thumbnail" src="https://cdn.fanatical.com/production/product/400x225/105f34ca-7757-47ad-953e-7df7f016741e.jpeg" alt="featured game card"></img>
             </div>
 
             <div className="container-4">
-              <img className="game-thumbnail" src={thumb} alt="featured game card"></img>
+              <h3 className="game-title">{title}</h3>
+              <img className="game-thumbnail" src="https://cdn.fanatical.com/production/product/400x225/105f34ca-7757-47ad-953e-7df7f016741e.jpeg" alt="featured game card"></img>
             </div>
           </div>
       </div>
