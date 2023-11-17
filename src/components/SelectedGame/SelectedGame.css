@@ -6,8 +6,16 @@
     --hoverPrimary: #BA9FFB;
 }
 
+.body-page{
+    margin-top: 1rem;
+}
+
 .game-head{
     margin-bottom: 0;
+}
+
+.p-color{
+    color: black;
 }
 
 .divStyle {
@@ -53,6 +61,7 @@
 
 .col{
     display: flex;
+    width: 100%;
 }
 
 @media screen and (max-width: 600px) {

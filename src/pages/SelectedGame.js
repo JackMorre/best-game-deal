@@ -4,10 +4,12 @@ import { SelectedGameReviews } from "../components/SelectedGame/SelectedGameRevi
 import { SelectedGameInfo } from "../components/SelectedGame/SelectedGameInfo";
 
 import "../components/SelectedGame/SelectedGame.css"
+import { SearchBar } from "../components/SearchBar/SearchBar";
 
 export const SelectedGame = () => {
   return (
     <Stack className="body-page">
+      <SearchBar/>
       <SelectedGameThumbnail/>
         <div className="row">
           <div className="col"><SelectedGameInfo/></div>
