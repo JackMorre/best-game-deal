@@ -1,14 +1,16 @@
 import { GameCard } from "../components/GameCard/GameCard";
 import { SearchBar } from "../components/SearchBar/SearchBar";
 
-import { dataForSearch } from "../local-json/searchData";
+// import { dataForSearch } from "../local-json/searchData";
+
+const dataForSearch = null;
 
 export const Watchlist = () => {
   return (
     <section className="watchlist">
       <SearchBar />
       {!dataForSearch ? (
-        <h2 style={{ color: "black" }}>Nothing on your wishlist yet 😜</h2>
+        <h2>Nothing on your wishlist yet 😜</h2>
       ) : (
         <div>
           <h2 style={{ color: "black" }}>Wishlist</h2>

@@ -43,20 +43,102 @@
 .bottom-left {
   z-index: 111;
   position: absolute;
-  top: 50%;
-  left: 75%;
+  top: 70%;
+  left: 50%;
   transform: translate(-50%, -50%);
   max-width: 1500px;
   background-color: none;
 }
 
+.up-right {
+  z-index: 111;
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  max-width: 1500px;
+  background-color: none;
+}
+
+.deals-sticker {
+  width: 40vh;
+  transform: rotate(-10deg);
+}
+
 .deals-h1 {
-  font-size: 20vh;
+  font-size: 23vh;
   color: var(--highlight-main);
   background-color:none;
+  letter-spacing: 1.5rem;
 }
 
 .p-text {
-  font-size: 2rem;
+  font-size: 2.1rem;
   background-color: none;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0.5rem;
+  width: 800px;
+  line-height: 1.5rem;
+  word-spacing: 0.7rem;
+}
+
+
+@media screen and (max-width: 800px){
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin: auto;
+    height: 60vh;
+  }
+
+  .up-right {
+    top: 26%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    max-width: 1500px;
+    background-color: none;
+  }
+
+  .deals-sticker {
+    width: 18vh;
+    transform: rotate(-10deg);
+  }
+
+  .container > img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    background-color: none;
+  }
+
+  .bottom-left {
+    z-index: 111;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    background-color: none;
+  }
+
+  .deals-h1 {
+    font-size: 10vh;
+    color: var(--highlight-main);
+    background-color:none;
+    letter-spacing: 1rem;
+  }
+  
+  .p-text {
+    font-size: 1.4rem;
+    background-color: none;
+    letter-spacing: 0.1rem;
+    line-height: 0.4rem;
+    word-spacing: 0.3rem;
+    color: white;
+    font-weight: 900;
+    width: 100%;
+  }
 }
