@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { NoMatchCards } from "../components/NoMatchCard/NoMatchCards";
 import "./noMatch.css";
 
 export const NoMatch = () => {
@@ -8,16 +9,16 @@ export const NoMatch = () => {
       <h2>Did you want one of these games:</h2>
       <div className="noMatchContainer">
         <Link to="/" id="option1" className="options">
-          Option 1
+          <NoMatchCards />
         </Link>
         <Link to="/" id="option2" className="options">
-          Option 2
+          <NoMatchCards />
         </Link>
         <Link to="/" id="option3" className="options">
-          Option 3
+          <NoMatchCards />
         </Link>
         <Link to="/" id="option4" className="options">
-          Option 4
+          <NoMatchCards />
         </Link>
       </div>
       <Link to="/" id="linkHome">

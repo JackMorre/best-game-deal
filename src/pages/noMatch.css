@@ -1,7 +1,7 @@
 .noMatch {
   text-align: center;
   background-color: #282828;
-  padding: 50px 100px 50px 100px;
+  padding: 50px 50px;
 }
 #linkHome {
   text-align: center;
@@ -17,7 +17,7 @@
 .options {
   flex: 0 0 20%; /* To have 4 items in a row */
   margin: 20px;
-  padding: 50px;
+  /* padding: 50px; */
   border: 1px solid #ccc;
   text-align: center;
   text-decoration: none;
