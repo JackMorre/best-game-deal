@@ -6,16 +6,15 @@ import CardActions from '@mui/material/CardActions';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 
 export const SelectedGameReview = (props) => {
     return (
-            <Card sx={{ maxWidth: 345, marginBottom: 1}}>
+            <Card sx={{ maxWidth: 345, margin: "0rem auto 1rem auto", border: 1, backgroundColor: '#3f3f3f'}}>
                 <CardHeader  sx={{ paddingY: 0.5 }}
                     avatar={
-                    <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                    <Avatar sx={{ bgcolor: "#a688fa" }} aria-label="recipe">
                     </Avatar>
                     }
                     title={props.title}
