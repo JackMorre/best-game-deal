@@ -2,11 +2,14 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  background-color: #121212;
+}
+
 .search,
-.watchlist {
+.watchlist,
+.header {
   max-width: 1000px;
   padding: 1rem;
   margin: 0 auto;
 }
-
-
