@@ -13,13 +13,19 @@
   --highlight-second: rgb(186, 159, 251);
 }
 
+.intro-container {
+  background-color: var(--background-dark-black);
+}
+
 .container {
   position: relative;
   text-align: center;
   color: white;
   width: 100%;
+  max-width: 2200px;
   margin: auto;
   height: 80vh;
+  border-radius: 0 0 3rem 3rem;
 }
 
 .container:after {
@@ -31,6 +37,7 @@
   height:100%;
   display:inline-block;
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(166, 136, 250, 0.554) 100%); 
+  border-radius: 0 0 3rem 3rem;
 }
 
 .container > img {
@@ -38,6 +45,7 @@
   height: 80vh;
   object-fit: cover;
   background-color: none;
+  border-radius: 0 0 3rem 3rem;
 }
 
 .bottom-left {
@@ -51,7 +59,7 @@
 }
 
 .up-right {
-  z-index: 111;
+  z-index: 1;
   position: absolute;
   top: 30%;
   left: 80%;
@@ -73,11 +81,11 @@
 }
 
 .p-text {
-  font-size: 2.1rem;
+  font-size: 1.5rem;
   background-color: none;
   color: white;
   font-weight: 900;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.6rem;
   width: 800px;
   line-height: 1.5rem;
   word-spacing: 0.7rem;
@@ -132,7 +140,7 @@
   }
   
   .p-text {
-    font-size: 1.4rem;
+    font-size: 1rem;
     background-color: none;
     letter-spacing: 0.1rem;
     line-height: 0.4rem;
