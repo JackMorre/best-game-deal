@@ -11,7 +11,7 @@ export const NoMatchCards = () => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
-        sx={{ height: 150 }}
+        sx={{ height: 175 }}
         image="https://unsplash.it/345/150"
         title="Random Image"
       />
