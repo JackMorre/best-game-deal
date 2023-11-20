@@ -25,7 +25,7 @@ export const NoMatchCards = () => {
         </Typography>
       </CardContent>
       <CardActions sx={{ justifyContent: "center" }}>
-        <Button size="small">Text Button</Button>
+        <Button size="small">Text Link</Button>
       </CardActions>
     </Card>
   );
