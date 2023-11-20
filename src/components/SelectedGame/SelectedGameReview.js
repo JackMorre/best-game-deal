@@ -21,7 +21,7 @@ export const SelectedGameReview = (props) => {
                     subheader={props.date}
                 />
                 <CardContent sx={{ paddingY: 0 }}>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2">
                     This impressive paella is a perfect party dish and a fun meal to cook
                     together with your guests. Add 1 cup of frozen peas along with the mussels,
                     if you like.
