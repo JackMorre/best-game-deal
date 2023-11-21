@@ -14,9 +14,10 @@
 
 .background-game-container {
   background-color: var(--background-dark-black);
-  height: 100vh;
+  height: 75vh;
   display: flex;
   flex-wrap: nowrap;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -32,6 +33,7 @@
   width: 70%;
   margin: auto;
   border-radius: 0 0 4rem 4rem;
+  max-width: 1000px;
 }
 
 .grid-container {
@@ -40,10 +42,10 @@
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
-  height: 20vh;
+  /* height: 20vh; */
   max-width: 1200px;
   margin: auto;
-  padding-top: 2rem;
+  padding-top: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -162,15 +164,36 @@
   font-size: 0.8rem;
 }
 
+.search-btn-container {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  margin: auto;  
+  cursor: pointer;
+  max-width: 600px;
+}
+
+.search-btn {
+  width: 100%;
+  min-height: 3rem;
+  background-color: var(--background-dark-black);
+  border-radius: 7rem;
+  font-size: 1.3rem;
+}
+
+.search-btn:hover {
+  background-color: var(--highlight-main);
+}
+
 
 
 @media screen and (max-width: 800px){
   .title {
     color: var(--highlight-second);
     text-align: center;
-    word-spacing: 1rem;
+    word-spacing: 0.3rem;
     letter-spacing: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.7rem;
     text-align: center;
     padding: 0.7rem 0;
     background-color: var(--background-light-black);
@@ -183,13 +206,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    /* grid-column-gap: 3rem; */
-    grid-row-gap: 3rem;
-    height: 100%;
+    grid-column-gap: 1.9rem;
+    grid-row-gap: 0rem;
+    height: 90%;
     max-width: 1000px;
     margin: auto;
-    margin-top: 0.1rem;
-    padding: 0.7rem 2rem 0 2rem;
+    padding-top: 3rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    margin-top: 1rem;
   }
 
   .container-1 {
@@ -207,6 +232,7 @@
     /* outline: 5px solid var(--highlight-second);
     border-radius: 0.3rem; */
     height: 20vh;
+    width: 100%;
   }
 
   .container-3 {
@@ -229,7 +255,7 @@
 
   .container-5 {
     grid-area: 3 / 1 / 4 / 2;
-    height: 15vh;
+    /* height: 15vh; */
     width: 100%;
     /* outline: 5px solid var(--highlight-second);
     border-radius: 0.3rem; */
@@ -238,7 +264,7 @@
 
   .container-6 {
     grid-area: 3 / 2 / 4 / 3; 
-    height: 15vh;
+    /* height: 15vh; */
     width: 100%;
     /* outline: 5px solid var(--highlight-second);
     border-radius: 0.3rem; */
@@ -249,17 +275,33 @@
     filter: brightness(0.70) drop-shadow(3px 3px 3px rgb(166,136,250));
   }
   
-  img.game-thumbnail {
+  .game-thumbnail {
     width: 100%;
+    object-fit: cover;
+    background-color: none;
+    min-height: 10vh;
+    z-index: 1;
   }
 
   .game-title {
-    padding: 0.7rem;
-    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0.2rem 1rem 0.2rem 0.2rem;
+    margin: -2.5rem 0.5rem 0.5rem 0;
     font-size: 0.8rem;
     /* filter: invert(100%); */
     background-color: rgba(186, 159, 251, 0.802);
-    border-radius: 0 5rem 5rem 0;
+    border-radius: 0 5rem 0rem 0;
+    max-width: 9rem;
+    color: var(--background-dark-black);
+}
+
+.price-tag {
+  padding: 0.1rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+}
+
+.price-tag:nth-of-type(2) {
+  font-size: 0.4rem;
 }
 }
 
