@@ -43,7 +43,12 @@ export const MainNavBar = () => {
   }
   return (
     <header className="header">
-      <p className="company-name" onClick={routeChange}>
+      <p
+        className="company-name"
+        onClick={() => {
+          routeChange();
+        }}
+      >
         Acme ❌ Games
       </p>
 
@@ -56,7 +61,12 @@ export const MainNavBar = () => {
           {pages.map((page) => {
             return (
               <li key={page.title}>
-                <a href={page.url}>
+                <a
+                  href={page.url}
+                  onClick={() => {
+                    handleOpen();
+                  }}
+                >
                   {page.title}
                   {page.title === "Watch List" ? (
                     <span className="watchlist-number">
@@ -71,7 +81,7 @@ export const MainNavBar = () => {
       </nav>
 
       {mobile ? (
-        <div className="mobile-nav-c" onClick={handleOpen}>
+        <div className="mobile-nav-c">
           {!open ? (
             <FiMenu className="icon" />
           ) : (
