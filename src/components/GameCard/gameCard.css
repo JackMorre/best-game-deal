@@ -48,7 +48,13 @@
   width: 20%;
   border: none;
   background-color: #a688fa;
+  cursor: pointer;
 }
+
+.card-c button:hover {
+  background-color: #BA9FFB;
+}
+
 .data-c {
   display: flex;
   justify-content: space-between;
