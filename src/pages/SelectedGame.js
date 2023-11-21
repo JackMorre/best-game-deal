@@ -2,6 +2,8 @@ import "../components/SelectedGame/SelectedGame.css"
 import { Stack } from "react-bootstrap";
 import { SelectedGameThumbnail } from "../components/SelectedGame/SelectedGameThumbnail";
 import { SelectedGameReviews } from "../components/SelectedGame/SelectedGameReviews";
+
+import "../components/SelectedGame/SelectedGame.css";
 import { SearchBar } from "../components/SearchBar/SearchBar";
 import { SelectedGameBesOption } from "../components/SelectedGame/SelectedGameBesOption";
 import { useEffect, useState } from "react";

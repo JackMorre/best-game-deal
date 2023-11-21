@@ -1,14 +1,13 @@
 import { GameCard } from "../components/GameCard/GameCard";
-import { SearchBar } from "../components/SearchBar/SearchBar";
-
-// import { dataForSearch } from "../local-json/searchData";
+import { useApp } from "../context/AppProvider";
 
 const dataForSearch = null;
 
 export const Watchlist = () => {
+  const { watchlist } = useApp();
+
   return (
     <section className="watchlist">
-      <SearchBar />
       {!dataForSearch ? (
         <h2>Nothing on your wishlist yet 😜</h2>
       ) : (
@@ -23,7 +22,7 @@ export const Watchlist = () => {
               flexDirection: "column",
             }}
           >
-            {dataForSearch.map((game) => {
+            {watchlist.map((game) => {
               return (
                 <GameCard
                   key={game.gameID}

@@ -1,8 +1,20 @@
+import { useNavigate } from "react-router-dom";
 import "./FeaturedCard.css";
 import React, { useState, useEffect } from "react";
 
-export const FeaturedCard = () => {
+export const FeaturedCard = ({ handleSetDeal }) => {
   const [posts, setPosts] = useState([]);
+
+  let navigate = useNavigate();
+
+  const routeChange = ({ dealID, gameID }) => {
+    let path = `/search/${gameID}`;
+    const obj = { dealID, gameID };
+    handleSetDeal(obj);
+    navigate(path);
+
+    console.log(dealID);
+  };
 
   useEffect(() => {
     fetch("https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15")
@@ -24,7 +36,12 @@ export const FeaturedCard = () => {
 
         <div className="grid-container">
           {posts.map((data, i) => (
-            <div className={`container-${i}`}>
+            <div
+              className={`container-${i}`}
+              onClick={() => {
+                routeChange(data);
+              }}
+            >
               <div key={data.dealID}>
                 <h3 className="game-title">{data.title}</h3>
                 <img
@@ -32,10 +49,10 @@ export const FeaturedCard = () => {
                   src={data.thumb}
                   alt="featured game card"
                 ></img>
-                  <div className="price-container">
-                    <p className="price-tag">£ {data.salePrice}</p>
-                    <p className="price-tag">£ {data.normalPrice}</p>
-                  </div>
+                <div className="price-container">
+                  <p className="price-tag">£ {data.salePrice}</p>
+                  <p className="price-tag">£ {data.normalPrice}</p>
+                </div>
               </div>
             </div>
           ))}
@@ -44,8 +61,6 @@ export const FeaturedCard = () => {
     </div>
   );
 };
-
-
 
 // for slideshow best rated / under five pounds games:
 // <div>
