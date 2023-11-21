@@ -137,8 +137,8 @@ export const SelectedGame = () => {
         <SearchBar/>
         </div>
         <SelectedGameThumbnail
-        /* header={info.name}
-        thumbnail={info.thumb} */ 
+        header={info?.name}
+        thumbnail={info?.thumb} 
         />
             <div className="row">
             <div className="col">
