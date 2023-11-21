@@ -1,6 +1,11 @@
+.search-c {
+  position: relative;
+}
+
 .search-form {
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .search-input[type="text"] {
@@ -26,4 +31,10 @@
 
 .search-c p {
   color: red;
+}
+
+.search-error {
+  position: absolute;
+  top: 105%;
+  left: 0;
 }
