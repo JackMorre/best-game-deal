@@ -1,5 +1,4 @@
 import axios from "axios";
-import { dataForSearch } from "./local-json/searchData";
 import { useEffect, useState } from "react";
 
 import { Route, Routes } from "react-router-dom";
