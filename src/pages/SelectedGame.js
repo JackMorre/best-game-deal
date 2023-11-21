@@ -14,7 +14,7 @@ export const SelectedGame = ({deal}) => {
 
     useEffect(()=> {
         getOptions();
-    }, [])
+    })
 
     const stores = [
         {
