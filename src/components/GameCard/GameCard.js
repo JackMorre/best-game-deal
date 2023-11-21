@@ -6,7 +6,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 export const GameCard = ({ title, image, price, dealID, watchlist }) => {
   let navigate = useNavigate();
   const routeChange = () => {
-    let path = `/search/${dealID}`;
+    let path = `/search/:id${dealID}`;
     navigate(path);
   };
   return (

@@ -6,12 +6,30 @@
     --hoverPrimary: #BA9FFB;
 }
 
+.body-page{
+    margin-top: 1rem;
+}
+
 .game-head{
     margin-bottom: 0;
 }
 
+.widthForSearch{
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0 1rem;
+}
+
+.best-deal-h1{
+    color: white;
+}
+
+.p-color{
+    color: black;
+}
+
 .divStyle {
-    margin: 1rem;
+    margin: 1rem 0;
     border: 1px solid var(--cardBackground);
 }
 .selectedGameContainer {
@@ -38,6 +56,7 @@
     background-color: var(--Primary);
     border-radius: 5px;
     cursor: pointer;
+    padding: 0.5rem 1rem;
 }
 
 .button:hover{
@@ -46,13 +65,69 @@
 
 .row{
     display: grid;
+    max-width: 1000px;
     grid-template-columns: 2fr 1fr;
-    margin: 0 1rem;
+    margin: 0 auto;
     gap: 2rem;
+    padding: 1rem;
 }
 
 .col{
+    width: 100%;
+    margin: 05 ;
+}
+
+.option-card{
+    width: 100%;
     display: flex;
+    background-color: var(--cardBackground);
+    margin-bottom: 1rem;
+}
+
+.option-img{
+    width: 25%;
+    overflow: hidden;
+    align-items: center;
+    margin: 0.2rem;
+}
+
+.option-img img{
+    max-width: 100%;
+    height: auto;
+}
+
+.option-text{
+    width: 100%;
+    background-color: #282828;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.4rem;
+    padding: 0.5rem;
+}
+
+.option-button{
+    background-color: var(--Primary);
+    border: none;
+    width: 20%;
+    cursor: pointer;
+}
+
+.option-button:hover{
+    background-color: var(--hoverPrimary);
+}
+
+.option-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.option-date {
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -66,7 +141,8 @@
         display: block;
         
     }
-    .col{
-        justify-content: center;
-    }
+    .option-img img{
+        width: 12%;
+        height: auto;
+    } 
 }
