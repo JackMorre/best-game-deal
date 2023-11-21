@@ -58,6 +58,9 @@ export const FeaturedCard = ({ handleSetDeal }) => {
           ))}
         </div>
       </div>
+      <div className="search-btn-container">
+        <button className="search-btn">Search for a game</button>
+      </div>
     </div>
   );
 };
