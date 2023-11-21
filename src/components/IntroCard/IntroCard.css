@@ -25,7 +25,7 @@
   max-width: 2200px;
   margin: auto;
   height: 80vh;
-  border-radius: 0 0 3rem 3rem;
+  border-radius: 0 0 4rem 4rem;
 }
 
 .container:after {
@@ -37,7 +37,13 @@
   height:100%;
   display:inline-block;
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(166, 136, 250, 0.554) 100%); 
-  border-radius: 0 0 3rem 3rem;
+  border-radius: 0 0 4rem 4rem;
+  animation: hue 12s infinite;
+}
+
+@keyframes hue {
+  0%, 100%  { -webkit-filter: hue-rotate(0deg); }
+  50% { -webkit-filter: hue-rotate(180deg); }
 }
 
 .container > img {
@@ -45,7 +51,7 @@
   height: 80vh;
   object-fit: cover;
   background-color: none;
-  border-radius: 0 0 3rem 3rem;
+  border-radius: 0 0 4rem 4rem;
 }
 
 .bottom-left {
