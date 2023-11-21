@@ -2,7 +2,6 @@ import "../components/SelectedGame/SelectedGame.css";
 import { Stack } from "react-bootstrap";
 import { SelectedGameThumbnail } from "../components/SelectedGame/SelectedGameThumbnail";
 import { SelectedGameReviews } from "../components/SelectedGame/SelectedGameReviews";
-// import { SelectedGameInfo } from "../components/SelectedGame/SelectedGameInfo";
 
 import "../components/SelectedGame/SelectedGame.css";
 import { SearchBar } from "../components/SearchBar/SearchBar";
