@@ -1,5 +1,5 @@
 import { useContext, useState, createContext, useEffect } from "react";
-import { getFromLocalStorage } from "./utils/getFromLocalStorage";
+import { getFromLocalStorage } from "../utils/getLocaleStorage";
 
 const AppContext = createContext();
 export const useApp = () => useContext(AppContext);
