@@ -17,10 +17,11 @@
 .widthForSearch{
     margin: 0 auto;
     max-width: 1000px;
+    padding: 0 1rem;
 }
 
 .best-deal-h1{
-    color: black;
+    color: white;
 }
 
 .p-color{
@@ -55,6 +56,7 @@
     background-color: var(--Primary);
     border-radius: 5px;
     cursor: pointer;
+    padding: 0.5rem 1rem;
 }
 
 .button:hover{
@@ -67,6 +69,7 @@
     grid-template-columns: 2fr 1fr;
     margin: 0 auto;
     gap: 2rem;
+    padding: 1rem;
 }
 
 .col{
@@ -75,7 +78,6 @@
 }
 
 .option-card{
-    height: 100%;
     width: 100%;
     display: flex;
     background-color: var(--cardBackground);
@@ -126,7 +128,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
-  }
+}
 
 @media screen and (max-width: 600px) {
     .selectedGameContainer {

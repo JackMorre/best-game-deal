@@ -3,15 +3,15 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import Rating from '@mui/material/Rating';
 import { useState } from "react";
 
-export const SelectedGameThumbnail = () => {
+export const SelectedGameThumbnail = ({header, thumbnail}) => {
     const [value, setValue] = useState(2);
 
     return (
         <div  className="divStyle">
             <div className="selectedGameContainer">
-                <Image className="gameImage" alt="game" fluid src="https://cdn.fanatical.com/production/product/400x225/105f34ca-7757-47ad-953e-7df7f016741e.jpeg"/>
+                <Image className="gameImage" alt="game" fluid src={thumbnail}/>
                 <div className="head">
-                <h1 className="game-head" >LEGO BATMAN</h1>
+                <h1 className="game-head" >{header}</h1>
                     <Rating
                     name="simple-controlled"
                     value={value}
