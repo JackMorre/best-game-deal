@@ -37,7 +37,7 @@ export const SearchBar = ({ handleUrlChange }) => {
         ></input>
         <button
           disabled={formik.isSubmitting}
-          className="search-btn"
+          className="search-button"
           type="submit"
         >
           <ArrowForwardIosIcon sx={{ height: "20px" }} />

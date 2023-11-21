@@ -61,12 +61,7 @@ export const MainNavBar = () => {
           {pages.map((page) => {
             return (
               <li key={page.title}>
-                <a
-                  href={page.url}
-                  onClick={() => {
-                    handleOpen();
-                  }}
-                >
+                <a href={page.url}>
                   {page.title}
                   {page.title === "Watch List" ? (
                     <span className="watchlist-number">
@@ -81,7 +76,7 @@ export const MainNavBar = () => {
       </nav>
 
       {mobile ? (
-        <div className="mobile-nav-c">
+        <div className="mobile-nav-c" onClick={handleOpen}>
           {!open ? (
             <FiMenu className="icon" />
           ) : (
