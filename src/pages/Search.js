@@ -1,7 +1,7 @@
 import { GameCard } from "../components/GameCard/GameCard";
 import { SearchBar } from "../components/SearchBar/SearchBar";
 
-export const Search = ({ searchData, handleUrlChange }) => {
+export const Search = ({ searchData, handleUrlChange, handleSetDeal }) => {
   return (
     <section className="search">
       <SearchBar handleUrlChange={handleUrlChange} />
@@ -29,6 +29,8 @@ export const Search = ({ searchData, handleUrlChange }) => {
                       image={game.thumb}
                       price={game.cheapest}
                       dealID={game.cheapestDealID}
+                      handleSetDeal={handleSetDeal}
+                      gameID={game.gameID}
                     />
                   );
                 })}

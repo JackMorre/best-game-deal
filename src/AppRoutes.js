@@ -15,12 +15,14 @@ export default function AppRoutes() {
 
   const [data, setData] = useState();
 
+  const [deal, setDeal] = useState();
+
   useEffect(() => {
     if (url) {
       console.log(url);
       async function GetData() {
         const fetchData = await axios.get(url);
-        // console.log(data);
+        console.log(fetchData.data);
         setData(fetchData.data);
       }
 
@@ -46,6 +48,10 @@ export default function AppRoutes() {
     }
   }, [url]);
 
+  function handleSetDeal(input) {
+    setDeal(input);
+  }
+
   function handleUrlChange(search) {
     setUrl(() => {
       return `https://www.cheapshark.com/api/1.0/games?title=${search}`;
@@ -56,9 +62,15 @@ export default function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route
         path="/search"
-        element={<Search searchData={data} handleUrlChange={handleUrlChange} />}
+        element={
+          <Search
+            searchData={data}
+            handleUrlChange={handleUrlChange}
+            handleSetDeal={handleSetDeal}
+          />
+        }
       />
-      <Route path="/search/:id" element={<SelectedGame />} />
+      <Route path="/search/:id" element={<SelectedGame deal={deal} />} />
       <Route path="/watchlist" element={<Watchlist />} />
       <Route path="/deals" element={<Deals />} />
       <Route path="*" element={<NoMatch />} />

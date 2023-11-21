@@ -34,7 +34,6 @@ export const MainNavBar = () => {
     navigate(path);
   };
 
-  console.log(width);
   function handleOpen() {
     setOpen(!open);
   }
