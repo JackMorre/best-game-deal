@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import "./gameCard.css";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { useApp } from "../../context/AppProvider";
 
 export const GameCard = ({
   title,
@@ -11,9 +12,13 @@ export const GameCard = ({
   watchlist,
   handleSetDeal,
   gameID,
+  game,
 }) => {
+  const { setClickedGame } = useApp();
   let navigate = useNavigate();
   const routeChange = () => {
+    console.log(game);
+    setClickedGame(game);
     let path = `/search/${gameID}`;
     const obj = { dealID, gameID };
     handleSetDeal(obj);

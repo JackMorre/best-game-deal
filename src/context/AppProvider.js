@@ -5,15 +5,15 @@ const AppContext = createContext();
 export const useApp = () => useContext(AppContext);
 export const AppProvider = ({ children }) => {
   const [watchlist, setWatchlist] = useState([]);
-  const value = { watchlist, setWatchlist };
+  const [clickedGame, setClickedGame] = useState(undefined);
+  const value = { watchlist, setWatchlist, clickedGame, setClickedGame };
   useEffect(() => {
     // check if items is undefined
-    if (!watchlist) {
-      const itemsFromLS = getFromLocalStorage("watchlist", []);
 
-      setWatchlist(itemsFromLS);
-    }
-  }, [watchlist]);
+    const itemsFromLS = getFromLocalStorage("watchlist", []);
+
+    setWatchlist(itemsFromLS);
+  }, []);
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

@@ -7,7 +7,6 @@ import { Home } from "./pages/Home";
 import { Search } from "./pages/Search";
 import { Watchlist } from "./pages/Watchlist";
 import { NoMatch } from "./pages/NoMatch";
-import { Deals } from "./pages/Deals";
 
 export default function AppRoutes() {
   const [url, setUrl] = useState("");
@@ -70,8 +69,10 @@ export default function AppRoutes() {
         }
       />
       <Route path="/search/:id" element={<SelectedGame deal={deal} />} />
-      <Route path="/watchlist" element={<Watchlist />} />
-      <Route path="/deals" element={<Deals />} />
+      <Route
+        path="/watchlist"
+        element={<Watchlist handleSetDeal={handleSetDeal} />}
+      />
       <Route path="*" element={<NoMatch />} />
     </Routes>
   );

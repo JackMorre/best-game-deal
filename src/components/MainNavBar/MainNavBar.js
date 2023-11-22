@@ -8,7 +8,6 @@ import { useApp } from "../../context/AppProvider";
 const pages = [
   { title: "Search", url: "/search" },
   { title: "Watch List", url: "/watchlist" },
-  { title: "Deals", url: "/deals" },
 ];
 
 export const MainNavBar = () => {
@@ -32,21 +31,18 @@ export const MainNavBar = () => {
     window.addEventListener("resize", handleResize);
   }, [width]);
 
-  let navigate = useNavigate();
-  const routeChange = () => {
-    let path = `/`;
-    navigate(path);
-  };
+  const navigate = useNavigate();
 
-  function handleOpen() {
+  const handleOpen = () => {
     setOpen(!open);
-  }
+  };
   return (
     <header className="header">
       <p
         className="company-name"
         onClick={() => {
-          routeChange();
+          navigate("/");
+          handleOpen();
         }}
       >
         Acme ❌ Games
@@ -61,14 +57,20 @@ export const MainNavBar = () => {
           {pages.map((page) => {
             return (
               <li key={page.title}>
-                <a href={page.url}>
+                <div
+                  className="clickable"
+                  onClick={() => {
+                    navigate(page.url);
+                    handleOpen();
+                  }}
+                >
                   {page.title}
                   {page.title === "Watch List" ? (
                     <span className="watchlist-number">
                       {watchlist?.length}
                     </span>
                   ) : undefined}
-                </a>
+                </div>
               </li>
             );
           })}

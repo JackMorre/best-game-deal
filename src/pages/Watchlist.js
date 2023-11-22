@@ -1,27 +1,21 @@
 import { GameCard } from "../components/GameCard/GameCard";
 import { useApp } from "../context/AppProvider";
+import "./watchlist.css";
 
-const dataForSearch = null;
-
-export const Watchlist = () => {
+export const Watchlist = ({ handleSetDeal }) => {
   const { watchlist } = useApp();
-
+  const test = () => {
+    console.log(watchlist);
+  };
+  test();
   return (
     <section className="watchlist">
-      {!dataForSearch ? (
-        <h2>Nothing on your wishlist yet 😜</h2>
+      {!watchlist || watchlist.length === 0 ? (
+        <h2>Nothing on your watchlist yet 😜</h2>
       ) : (
         <div>
-          <h2 style={{ color: "black" }}>Wishlist</h2>
-          <ul
-            style={{
-              listStyle: "none",
-              padding: "0",
-              display: "flex",
-              gap: "1rem",
-              flexDirection: "column",
-            }}
-          >
+          <h2>Wishlist</h2>
+          <ul className="list-items-wl">
             {watchlist.map((game) => {
               return (
                 <GameCard
@@ -31,6 +25,9 @@ export const Watchlist = () => {
                   price={game.cheapest}
                   dealID={game.cheapestDealID}
                   watchlist={true}
+                  gameID={game.gameID}
+                  game={game}
+                  handleSetDeal={handleSetDeal}
                 />
               );
             })}

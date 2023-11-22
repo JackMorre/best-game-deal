@@ -1,0 +1,11 @@
+.list-items-wl {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.watchlist h2 {
+  margin-bottom: 1rem;
+}

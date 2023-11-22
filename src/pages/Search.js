@@ -31,6 +31,7 @@ export const Search = ({ searchData, handleUrlChange, handleSetDeal }) => {
                       dealID={game.cheapestDealID}
                       handleSetDeal={handleSetDeal}
                       gameID={game.gameID}
+                      game={game}
                     />
                   );
                 })}
