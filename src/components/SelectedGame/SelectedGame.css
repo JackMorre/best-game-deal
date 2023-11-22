@@ -30,11 +30,13 @@
 
 .divStyle {
     margin: 1rem 0;
-    border: 1px solid var(--cardBackground);
 }
+
 .selectedGameContainer {
     display: flex;
     background-color: var(--cardBackground);
+    max-width: 1000px;
+    margin: auto;
 }
 .gameImage {
     min-width: 50%;
@@ -42,11 +44,13 @@
 }
 .head {
     margin: 1rem 0.5rem;
+    display: grid;
+    align-content: space-between;
 }
 
 .streamStyle {
     display: flex; 
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 1rem;
 }
 
@@ -125,7 +129,7 @@
 
 .option-date {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
 }
 

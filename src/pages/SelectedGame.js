@@ -2,9 +2,6 @@ import "../components/SelectedGame/SelectedGame.css"
 import { Stack } from "react-bootstrap";
 import { SelectedGameThumbnail } from "../components/SelectedGame/SelectedGameThumbnail";
 import { SelectedGameReviews } from "../components/SelectedGame/SelectedGameReviews";
-
-import "../components/SelectedGame/SelectedGame.css";
-import { SearchBar } from "../components/SearchBar/SearchBar";
 import { SelectedGameBesOption } from "../components/SelectedGame/SelectedGameBesOption";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -135,15 +132,13 @@ export const SelectedGame = ({deal}) => {
 
     return (
         <Stack className="body-page">
-        <div className="widthForSearch">
-        <SearchBar/>
-        </div>
         <SelectedGameThumbnail
         header={info?.title}
         thumbnail={info?.thumb} 
         />
             <div className="row">
             <div className="col">
+                <h1>Best Deals</h1>
                 {optionLoading && options.map((option) => {
                         /* find the store by store id in the store array */ 
                         const store =  stores.find((store) => {
