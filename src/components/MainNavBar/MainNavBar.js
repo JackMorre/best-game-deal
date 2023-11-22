@@ -3,6 +3,7 @@ import { IoClose } from "react-icons/io5";
 import "./MainNavBar.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useApp } from "../../context/AppProvider";
 
 const pages = [
   { title: "Search", url: "/search" },
@@ -14,6 +15,9 @@ export const MainNavBar = () => {
   const [mobile, setMobile] = useState(true);
   const [open, setOpen] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
+
+  const { watchlist } = useApp();
+
   useEffect(() => {
     function handleResize() {
       setWidth(window.innerWidth);
@@ -34,13 +38,17 @@ export const MainNavBar = () => {
     navigate(path);
   };
 
-  console.log(width);
   function handleOpen() {
     setOpen(!open);
   }
   return (
     <header className="header">
-      <p className="company-name" onClick={routeChange}>
+      <p
+        className="company-name"
+        onClick={() => {
+          routeChange();
+        }}
+      >
         Acme ❌ Games
       </p>
 
@@ -53,7 +61,14 @@ export const MainNavBar = () => {
           {pages.map((page) => {
             return (
               <li key={page.title}>
-                <a href={page.url}>{page.title}</a>
+                <a href={page.url}>
+                  {page.title}
+                  {page.title === "Watch List" ? (
+                    <span className="watchlist-number">
+                      {watchlist?.length}
+                    </span>
+                  ) : undefined}
+                </a>
               </li>
             );
           })}

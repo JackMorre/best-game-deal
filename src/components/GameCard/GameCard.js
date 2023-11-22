@@ -3,16 +3,28 @@ import "./gameCard.css";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
-export const GameCard = ({ title, image, price, dealID, watchlist }) => {
+export const GameCard = ({
+  title,
+  image,
+  price,
+  dealID,
+  watchlist,
+  handleSetDeal,
+  gameID,
+}) => {
   let navigate = useNavigate();
   const routeChange = () => {
-    let path = `/search/${dealID}`;
+    let path = `/search/${gameID}`;
+    const obj = { dealID, gameID };
+    handleSetDeal(obj);
     navigate(path);
+
+    console.log(dealID);
   };
   return (
     <li className="card-c">
       <div className="img-c">
-        <img alt="img of the game Buldurs gate III" src={image}></img>
+        <img alt={`img of the game ${title}`} src={image}></img>
       </div>
       <div className="text-c">
         <div className="title-c">

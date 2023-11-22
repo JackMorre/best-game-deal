@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: none;
 }
 
 :root {
@@ -13,13 +12,24 @@
   --highlight-second: rgb(186, 159, 251);
 }
 
+.intro-container {
+  background-color: var(--highlight-main);
+  width: 100%;
+  margin: auto;
+}
+
 .container {
   position: relative;
   text-align: center;
   color: white;
   width: 100%;
+  max-width: 1900px;
   margin: auto;
   height: 80vh;
+  /* border-radius: 0 0 4rem 4rem; */
+  background-color: var(--highlight-main);
+  /* clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); */
+  clip-path: polygon(89% 0, 100% 50%, 89% 100%, 0% 100%, 11% 50%, 0% 0%);
 }
 
 .container:after {
@@ -31,6 +41,13 @@
   height:100%;
   display:inline-block;
   background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(166, 136, 250, 0.554) 100%); 
+  /* border-radius: 0 0 4rem 4rem; */
+  animation: hue 12s infinite;
+}
+
+@keyframes hue {
+  0%, 100%  { -webkit-filter: hue-rotate(0deg); }
+  50% { -webkit-filter: hue-rotate(180deg); }
 }
 
 .container > img {
@@ -38,6 +55,8 @@
   height: 80vh;
   object-fit: cover;
   background-color: none;
+  /* border-radius: 0 0 4rem 4rem; */
+  background-color: var(--highlight-main);
 }
 
 .bottom-left {
@@ -51,7 +70,7 @@
 }
 
 .up-right {
-  z-index: 111;
+  z-index: 1;
   position: absolute;
   top: 30%;
   left: 80%;
@@ -61,7 +80,7 @@
 }
 
 .deals-sticker {
-  width: 40vh;
+  width: 30vh;
   transform: rotate(-10deg);
 }
 
@@ -69,18 +88,19 @@
   font-size: 23vh;
   color: var(--highlight-main);
   background-color:none;
-  letter-spacing: 1.5rem;
+  letter-spacing: 1.6rem;
 }
 
 .p-text {
-  font-size: 2.1rem;
+  font-size: 1.5rem;
   background-color: none;
   color: white;
   font-weight: 900;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.6rem;
   width: 800px;
   line-height: 1.5rem;
   word-spacing: 0.7rem;
+  margin: auto;
 }
 
 
@@ -103,7 +123,7 @@
   }
 
   .deals-sticker {
-    width: 18vh;
+    width: 15vh;
     transform: rotate(-10deg);
   }
 
@@ -122,17 +142,18 @@
     transform: translate(-50%, -50%);
     max-width: 500px;
     background-color: none;
+    width: 100%;
   }
 
   .deals-h1 {
     font-size: 10vh;
     color: var(--highlight-main);
     background-color:none;
-    letter-spacing: 1rem;
+    letter-spacing: 1.1rem;
   }
   
   .p-text {
-    font-size: 1.4rem;
+    font-size: 1rem;
     background-color: none;
     letter-spacing: 0.1rem;
     line-height: 0.4rem;
@@ -140,5 +161,6 @@
     color: white;
     font-weight: 900;
     width: 100%;
+    margin: auto;
   }
 }

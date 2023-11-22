@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-dark-black: rgb(18, 18, 18);
+  --background-light-black: rgb(40, 40, 40);
+  --background-light-grey: rgb(63, 63, 63);
+  --highlight-main: rgb(166, 136, 250);
+  --highlight-second: rgb(186, 159, 251);
+}
+
+.slideshow-background {
+  width: 100%;
+  background-color: var(--background-light-black);
+}
+
+.under-5-h2 {
+  padding: 2rem;
+  text-align: center;
+  color: var(--background-dark-black);
+  text-align: center;
+  word-spacing: 1rem;
+  letter-spacing: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: var(--highlight-main);
+  width: 70%;
+  margin: auto;
+  border-radius: 0 0 4rem 4rem;
+  max-width: 1000px;
+  margin-bottom: 2rem;
+}
+
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 1000px;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.slide {
+  display: inline-block;
+  height: 350px;
+  width: 100%;
+  /* border-radius: 40px; */
+}
+
+/* Buttons */
+.slideshowDots {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.slideshowDot {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+  background-color: white;
+}
+
+.slideshowDot.active {
+  background-color:var(--highlight-second);
+}
+
+
+@media screen and (max-width: 800px){
+  .under-5-h2{
+    text-align: center;
+    word-spacing: 0.3rem;
+    letter-spacing: 0.5rem;
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 0.7rem 0;
+    width: 70%;
+    margin: auto;
+    border-radius: 0 0 4rem 4rem;
+    margin-bottom: 1rem;
+  }
+
+  /* .slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1000px;
+  } */
+  
+  /* .slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+  } */
+  
+  .slide {
+    display: inline-block;
+    height: 150px;
+    width: 100%;
+    /* border-radius: 40px; */
+  }
+  
+  /* Buttons */
+  .slideshowDots {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .slideshowDot {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 10px 7px 0px;
+    background-color: white;
+  }
+  
+  .slideshowDot.active {
+    background-color:var(--highlight-second);
+  }
+}
