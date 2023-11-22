@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import "./FeaturedCard.css";
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const FeaturedCard = ({ handleSetDeal }) => {
   const [posts, setPosts] = useState([]);
@@ -14,6 +14,15 @@ export const FeaturedCard = ({ handleSetDeal }) => {
     navigate(path);
 
     console.log(dealID);
+  };
+
+  // const pages = [
+  //   { title: "Search", url: "/search" }];
+
+  // let navigate2 = useNavigate();
+  const routeChange2 = () => {
+    let path = `/search`;
+    navigate(path);
   };
 
   useEffect(() => {
@@ -59,7 +68,7 @@ export const FeaturedCard = ({ handleSetDeal }) => {
         </div>
       </div>
       <div className="search-btn-container">
-        <button className="search-btn">Search for a game</button>
+        <button className="search-btn" onClick={routeChange2}>SEARCH</button>
       </div>
     </div>
   );
