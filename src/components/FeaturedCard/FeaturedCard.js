@@ -29,12 +29,11 @@ export const FeaturedCard = ({ handleSetDeal }) => {
     fetch("https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         const newArray = [data[6], data[1], data[2], data[3], data[4], data[5]];
         setPosts(newArray);
       })
       .catch((err) => {
-        console.log(err.message);
+        navigate("/error");
       });
   }, []);
 
@@ -46,6 +45,7 @@ export const FeaturedCard = ({ handleSetDeal }) => {
         <div className="grid-container">
           {posts.map((data, i) => (
             <div
+              key={i}
               className={`container-${i}`}
               onClick={() => {
                 routeChange(data);
@@ -68,7 +68,9 @@ export const FeaturedCard = ({ handleSetDeal }) => {
         </div>
       </div>
       <div className="search-btn-container">
-        <button className="search-btn" onClick={routeChange2}>SEARCH</button>
+        <button className="search-btn" onClick={routeChange2}>
+          SEARCH
+        </button>
       </div>
     </div>
   );
