@@ -6,7 +6,9 @@ export const Search = ({ searchData, handleUrlChange, handleSetDeal }) => {
     <section className="search">
       <SearchBar handleUrlChange={handleUrlChange} />
       {!searchData ? (
-        <h2>No Searches Yet 😜</h2>
+        <h2 style={{
+          height: "50vh",
+        }}>No Searches Yet 😜</h2>
       ) : (
         <div>
           {searchData.length > 0 ? (
@@ -31,7 +33,6 @@ export const Search = ({ searchData, handleUrlChange, handleSetDeal }) => {
                       dealID={game.cheapestDealID}
                       handleSetDeal={handleSetDeal}
                       gameID={game.gameID}
-                      game={game}
                     />
                   );
                 })}
