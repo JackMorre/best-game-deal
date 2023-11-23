@@ -1,4 +1,5 @@
 import AppRoutes from "./AppRoutes";
+import { FooterCard } from "./components/FooterCard/FooterCard";
 import { MainNavBar } from "./components/MainNavBar/MainNavBar";
 import { AppProvider } from "./context/AppProvider";
 
@@ -11,6 +12,7 @@ export default function App() {
         <div className="App">
           <MainNavBar />
           <AppRoutes />
+          <FooterCard />
         </div>
       </BrowserRouter>
     </AppProvider>
