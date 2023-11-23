@@ -5,11 +5,15 @@ import { SelectedGameReviews } from "../components/SelectedGame/SelectedGameRevi
 import { SelectedGameBesOption } from "../components/SelectedGame/SelectedGameBesOption";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { getFromLocalStorage } from "../utils/getLocaleStorage";
 
 export const SelectedGame = ({ deal }) => {
   const [options, setOptions] = useState([]);
   const [info, setInfo] = useState();
   const [optionLoading, setOptionLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     getOptions();
@@ -118,17 +122,27 @@ export const SelectedGame = ({ deal }) => {
     },
   ];
 
+  const fetch = async (id) => {
+    const res = await axios.get(
+      `https://www.cheapshark.com/api/1.0/games?id=${id}`
+    );
+    const resData = res.data;
+    setOptions(resData.deals);
+    setInfo(resData.info);
+    setOptionLoading(true);
+  };
+
   const getOptions = async () => {
     try {
-      const res = await axios.get(
-        `https://www.cheapshark.com/api/1.0/games?id=${deal.gameID}`
-      );
-      const resData = res.data;
-      setOptions(resData.deals);
-      setInfo(resData.info);
-      setOptionLoading(true);
+      if (deal.gameID) {
+        fetch(deal.gameID);
+      } else {
+        const itemsFromLS = getFromLocalStorage("currentGame", []);
+        console.log(itemsFromLS);
+        fetch(itemsFromLS.gameID);
+      }
     } catch (err) {
-      alert(err.message);
+      navigate("/error");
     }
   };
 

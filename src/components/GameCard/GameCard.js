@@ -16,15 +16,18 @@ export const GameCard = ({
 }) => {
   const { setClickedGame } = useApp();
   let navigate = useNavigate();
+
+  const saveCurrent = (game) => {
+    localStorage.setItem("currentGame", JSON.stringify(game));
+  };
+
   const routeChange = () => {
-    console.log(game);
     setClickedGame(game);
     let path = `/search/${gameID}`;
     const obj = { dealID, gameID };
     handleSetDeal(obj);
+    saveCurrent(game);
     navigate(path);
-
-    console.log(dealID);
   };
   return (
     <li className="card-c">
