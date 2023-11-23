@@ -22,7 +22,7 @@ export const NoMatch = () => {
         </Link>
       </div>
       <Link to="/" id="linkHome">
-        Link to Home Page
+        Home
       </Link>
     </div>
   );
