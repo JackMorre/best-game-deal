@@ -8,7 +8,8 @@ export const Watchlist = ({ handleSetDeal }) => {
   return (
     <section className="watchlist">
       {!watchlist || watchlist.length === 0 ? (
-        <h2>Nothing on your watchlist yet 😜</h2>
+        <h2 style={{
+          height: "50vh",}}>Nothing on your watchlist yet 😜</h2>
       ) : (
         <div>
           <h2>Wishlist</h2>
