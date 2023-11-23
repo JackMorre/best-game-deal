@@ -1,6 +1,6 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-export const SelectedGameBesOption = ( {price, image, subTitle, title} ) => {
+export const SelectedGameBestOption = ( {price, image, subTitle, title} ) => {
     
     return (
         <div className="option-card">
