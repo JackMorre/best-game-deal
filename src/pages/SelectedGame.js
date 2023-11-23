@@ -2,7 +2,7 @@ import "../components/SelectedGame/SelectedGame.css";
 import { Stack } from "react-bootstrap";
 import { SelectedGameThumbnail } from "../components/SelectedGame/SelectedGameThumbnail";
 import { SelectedGameReviews } from "../components/SelectedGame/SelectedGameReviews";
-import { SelectedGameBesOption } from "../components/SelectedGame/SelectedGameBesOption";
+import { SelectedGameBestOption } from "../components/SelectedGame/SelectedGameBestOption";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -165,7 +165,7 @@ export const SelectedGame = ({ deal }) => {
 
               /* retrive the image from the store - find methods */
               return (
-                <SelectedGameBesOption
+                <SelectedGameBestOption
                   key={option.storeID}
                   price={option.price}
                   subTitle={store.storeName}
