@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { SelectedGame } from "./pages/SelectedGame";
 import { Home } from "./pages/Home";
 import { Search } from "./pages/Search";
@@ -15,13 +15,17 @@ export default function AppRoutes() {
 
   const [deal, setDeal] = useState();
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (url) {
-      console.log(url);
       async function GetData() {
-        const fetchData = await axios.get(url);
-        console.log(fetchData.data);
-        setData(fetchData.data);
+        try {
+          const fetchData = await axios.get(url);
+          setData(fetchData.data);
+        } catch (err) {
+          navigate("/error");
+        }
       }
 
       GetData();

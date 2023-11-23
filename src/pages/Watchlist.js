@@ -4,10 +4,7 @@ import "./watchlist.css";
 
 export const Watchlist = ({ handleSetDeal }) => {
   const { watchlist } = useApp();
-  const test = () => {
-    console.log(watchlist);
-  };
-  test();
+
   return (
     <section className="watchlist">
       {!watchlist || watchlist.length === 0 ? (
