@@ -2,7 +2,7 @@ import { Image } from "react-bootstrap";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import Rating from "@mui/material/Rating";
 import { useState } from "react";
-import { IconButton, Tooltip } from "@mui/material";
+import { IconButton } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Avatar from "@mui/material/Avatar";
 
@@ -65,18 +65,18 @@ export const SelectedGameThumbnail = ({ header, thumbnail, info }) => {
             />
           </div>
           <p>
-            Lorem ipsum dolor sit amet. Eum neque adipisci qui enim quisquam vel
-            quas nulla. Et nisi nesciunt At blanditiis delectus eum quasi
-            voluptatem ut enim sapiente cum alias sint ut delectus voluptate.
+          Embark on an epic adventure where every choice shapes your
+          destiny. Dive into a vibrant world teeming with mystery, 
+          danger, and untold treasures. Unleash your skills, forge alliances, 
+          and confront formidable foes as you journey through breathtaking landscapes. With stunning visuals and immersive gameplay, prepare for an unforgettable odyssey that tests your courage and cunning. Your legend awaits—
+          what path will you forge in this captivating realm?
           </p>
           <div className="streamStyle">
-            <Tooltip title="Add to watch list">
               <IconButton onClick={addGame}>
                 <StyledAvatar>
                   <FavoriteIcon />
                 </StyledAvatar>
               </IconButton>
-            </Tooltip>
           </div>
         </div>
       </div>
