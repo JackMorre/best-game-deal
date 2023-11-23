@@ -15,6 +15,7 @@
 .slideshow-background {
   width: 100%;
   background-color: var(--background-light-black);
+  cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACtElEQVR4nO1az2sTURDekz8OSgVrvekfI4qg2KPVv0Fa/AdySmbSVGpREEEI1MwL5KjW2v9AxLNN0560XqR61Mys+GRWU8XsrrvJbt5m6cAHgU3C9/G+mZ1573neUZQ0COwZqvfnCbhhkDcMSNcgfyFkVuhng7Ktz/Q7LejfaK7aGa8I8XLNHqc63ybkLQL+blBsGuhvCHmzjXxL/8ubdHTu2ZOEcpdAPqYlHykKZd+gLDUr9sRERLTRv0oge1kJCMEuoX8lXxsBr+Uo4B/bybqufKYiTNXOGZS3kxJhDu3Gb9Yb9lwmItrw7aIu96RFmAFAesphLBGdqp39VUYdicBDm+11lu35kURo9XBhJxNjs5FKNCE/ck3eDNmMH6Qusc5JYzjaNf9y8jKLsuOasInGbqKXpr6xC0DWxoFAFpOsxn4RyJo4gHyITXxtAJ2TxISo8UKMrXjLOUFMCt6InidGaMVdgZD9pxV7OsRW/XnX5ExKtOr+tTBbrbgmZtLba3lISDCeOicmafFsWAhIrwDEbCqAdEOSnT87J4bpQMifwnKEp04IcL/EQqA01pIid7w2AtvlLb8UbHU6J2bTgIDr5W1Rmqt2ZpqaRgMsoU1jkCfAr6bGVsgvvKjQXfEpEnKzFKNup2KPRQoJ7IWyNAVC7sSKGKxKEbZJTbSIXuIdRz2fcE4Yh0HAPwj8S4lE/BHDD10TN0Pg+6lEDCymG8eFWQ3k1/9N8MhVWbFni5AvpEd9VTvnjX3Q43AMJpSdVuPrBS+L0OMvFzYjtVPVznp5HIZq5ZiQkMe5nr3r+USuVgPppi6x462OLGqrkGEuvNc3tpMbEEEXUOOF4H4Jsj9CDvjaxWoDOHJpzTp0NiDoX9dtTAP8/PcFmoO/LtUcEMg7HU91stOh6EndnsqcyFF4xYifJX0eiS5NBg4AAAAASUVORK5CYII='), auto;
 }
 
 .under-5-h2 {
@@ -49,9 +50,39 @@
 
 .slide {
   display: inline-block;
-  height: 350px;
+  min-height: 320px;
   width: 100%;
   /* border-radius: 40px; */
+}
+
+.slide > img {
+  width: 100%;
+  height: 30vh;
+  min-height: 300px;
+  /* height: 80vh; */
+  object-fit: cover;
+  background-color: none;
+  filter: brightness(0.75);
+}
+
+.title-paragraph-slideshow {
+  position: absolute;
+  padding: 0.7rem;
+  margin: -3.3rem 0.5rem 0.5rem 0;
+  font-size: 1rem;
+  /* filter: invert(100%); */
+  background-color: rgba(186, 159, 251, 0.802);
+  border-radius: 0 5rem 5rem 0;
+}
+
+.price-slideshow {
+  position: absolute;
+  font-weight: 900;
+  padding: 1.6rem;
+  margin: -8rem 0rem 0.5rem 70vh;
+  font-size: 2rem;
+  background-color: var(--highlight-main);
+  transform: rotate(8deg);
 }
 
 /* Buttons */
@@ -62,11 +93,11 @@
 
 .slideshowDot {
   display: inline-block;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
   cursor: pointer;
-  margin: 15px 7px 0px;
+  margin: 7px 7px 0px;
   background-color: white;
 }
 
@@ -102,11 +133,11 @@
   
   .slide {
     display: inline-block;
-    height: 150px;
+    min-height: 150px;
     width: 100%;
     /* border-radius: 40px; */
   }
-  
+
   /* Buttons */
   .slideshowDots {
     text-align: center;
@@ -125,5 +156,34 @@
   
   .slideshowDot.active {
     background-color:var(--highlight-second);
+  }
+
+  .slide > img {
+    width: 100%;
+    height: 20vh;
+    min-height: 180px;
+    /* height: 80vh; */
+    object-fit: cover;
+    background-color: none;
+  }
+
+  .title-paragraph-slideshow {
+    padding: 0.2rem 1rem 0.2rem 0.2rem;
+    margin: -2.5rem 0.5rem 0.5rem 0;
+    font-size: 0.8rem;
+    /* filter: invert(100%); */
+    background-color: rgba(186, 159, 251, 0.802);
+    border-radius: 0 5rem 0rem 0;
+    max-width: 12rem;
+    color: white;
+  }
+
+  .price-slideshow {
+    position: absolute;
+    font-weight: 900;
+    padding: 0.6rem;
+    margin: -5.2rem 0rem 0.5rem 34vh;
+    font-size: 1rem;
+    background-color: var(--highlight-main);
   }
 }
