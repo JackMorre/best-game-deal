@@ -14,3 +14,15 @@ body {
   padding: 1rem;
   margin: 0 auto;
 }
+
+.search-title {
+  margin-bottom: 1rem;
+}
+
+.search-results {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}

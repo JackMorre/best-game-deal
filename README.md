@@ -4,6 +4,8 @@ An App that allows you to find the cheapest games on the internet!
 
 To see what it is all about, check out [Acme ❌ games]()
 
+The API we used for this project is [CheapShark API](https://apidocs.cheapshark.com/)
+
 ## Installation
 
 ### `npm install`

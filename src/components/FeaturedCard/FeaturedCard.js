@@ -35,7 +35,7 @@ export const FeaturedCard = ({ handleSetDeal }) => {
       .catch((err) => {
         navigate("/error");
       });
-  }, []);
+  });
 
   return (
     <div className="background-game-container">

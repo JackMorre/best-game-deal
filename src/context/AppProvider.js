@@ -5,7 +5,7 @@ const AppContext = createContext();
 export const useApp = () => useContext(AppContext);
 export const AppProvider = ({ children }) => {
   const [watchlist, setWatchlist] = useState([]);
-  const [clickedGame, setClickedGame] = useState(undefined);
+  const [clickedGame, setClickedGame] = useState();
   const value = { watchlist, setWatchlist, clickedGame, setClickedGame };
   useEffect(() => {
     // check if items is undefined

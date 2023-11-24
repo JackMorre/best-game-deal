@@ -2,12 +2,15 @@
   text-align: center;
   background-color: #282828;
   padding: 50px 50px;
+  height: 49.8vh;
 }
+
 #linkHome {
   text-align: center;
   color: #a688fa;
   text-decoration: none;
 }
+
 .noMatchContainer {
   display: flex;
   flex-wrap: wrap;
@@ -21,4 +24,8 @@
   border: 1px solid #ccc;
   text-align: center;
   text-decoration: none;
+}
+
+.error-margin {
+  margin-bottom: 2rem;
 }

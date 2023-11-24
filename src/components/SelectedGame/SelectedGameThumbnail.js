@@ -8,9 +8,12 @@ import Avatar from "@mui/material/Avatar";
 
 import { getFromLocalStorage } from "../../utils/getLocaleStorage";
 import { useApp } from "../../context/AppProvider";
+import { useNavigate } from "react-router-dom";
 
 export const SelectedGameThumbnail = ({ header, thumbnail, info }) => {
   const [value, setValue] = useState(2);
+
+  const navigate = useNavigate();
 
   const { setWatchlist, clickedGame } = useApp();
 
@@ -28,6 +31,7 @@ export const SelectedGameThumbnail = ({ header, thumbnail, info }) => {
       });
       localStorage.setItem("watchlist", JSON.stringify(newArr));
       setWatchlist(newArr);
+      navigate("/watchlist");
     } else {
       const newItems = [...itemsFromLS, clickedGame];
       localStorage.setItem("watchlist", JSON.stringify(newItems));
@@ -65,18 +69,18 @@ export const SelectedGameThumbnail = ({ header, thumbnail, info }) => {
             />
           </div>
           <p>
-          Embark on an epic adventure where every choice shapes your
-          destiny. Dive into a vibrant world teeming with mystery, 
-          danger, and untold treasures. Unleash your skills, forge alliances, 
-          and confront formidable foes as you journey through breathtaking landscapes. With stunning visuals and immersive gameplay, prepare for an unforgettable odyssey that tests your courage and cunning. Your legend awaits—
-          what path will you forge in this captivating realm?
+            Embark on an epic adventure where every choice shapes your destiny.
+            Dive into a vibrant world teeming with mystery, danger, and untold
+            treasures. Unleash your skills, forge alliances, and confront
+            formidable foes as you journey through breathtaking landscapes. With
+            stunning visuals and immersive gameplay, prepare for an
+            unforgettable odyssey that tests your courage and cunning. Your
+            legend awaits— what path will you forge in this captivating realm?
           </p>
           <div className="streamStyle">
-              <IconButton onClick={addGame}>
-                <StyledAvatar>
-                  <FavoriteIcon />
-                </StyledAvatar>
-              </IconButton>
+            <div onClick={addGame}>
+              <FavoriteIcon />
+            </div>
           </div>
         </div>
       </div>

@@ -37,12 +37,12 @@ export const MainNavBar = () => {
     setOpen(!open);
   };
   return (
-    <header className="header">
+    <header className={`header ${mobile ? "black" : ""}`}>
       <p
         className="company-name"
         onClick={() => {
           navigate("/");
-          handleOpen();
+          // handleOpen();
         }}
       >
         Acme ❌ Games

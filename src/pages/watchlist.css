@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+.watchlist {
+  height: 50vh;
+}
+
 .watchlist h2 {
   margin-bottom: 1rem;
 }

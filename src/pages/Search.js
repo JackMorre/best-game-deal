@@ -6,23 +6,19 @@ export const Search = ({ searchData, handleUrlChange, handleSetDeal }) => {
     <section className="search">
       <SearchBar handleUrlChange={handleUrlChange} />
       {!searchData ? (
-        <h2 style={{
-          height: "50vh",
-        }}>No Searches Yet 😜</h2>
+        <h2
+          style={{
+            height: "50vh",
+          }}
+        >
+          No Searches Yet 😜
+        </h2>
       ) : (
         <div>
           {searchData.length > 0 ? (
             <>
-              <h2>Search </h2>
-              <ul
-                style={{
-                  listStyle: "none",
-                  padding: "0",
-                  display: "flex",
-                  gap: "1rem",
-                  flexDirection: "column",
-                }}
-              >
+              <h2 className="search-title">Search </h2>
+              <ul className="search-results">
                 {searchData.map((game) => {
                   return (
                     <GameCard
@@ -33,6 +29,7 @@ export const Search = ({ searchData, handleUrlChange, handleSetDeal }) => {
                       dealID={game.cheapestDealID}
                       handleSetDeal={handleSetDeal}
                       gameID={game.gameID}
+                      game={game}
                     />
                   );
                 })}
